@@ -1,0 +1,1 @@
+export function planificar(revisar){const visible=()=>{if(!document.hidden)revisar()};window.addEventListener('focus',visible);document.addEventListener('visibilitychange',visible);const id=setInterval(visible,15000);return ()=>{clearInterval(id);window.removeEventListener('focus',visible);document.removeEventListener('visibilitychange',visible)}}
